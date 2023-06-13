@@ -1,0 +1,72 @@
+<!DOCTYPE html>
+<html>
+<head lang="pt-BR">
+  <title>Dashboard Minimalista</title>
+  <link rel="stylesheet" href="./styles/style.css" />
+  <link rel="stylesheet" href="https://bootswatch.com/4/united/bootstrap.min.css" />
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/fullcalendar/3.10.2/fullcalendar.min.css" />
+  <link href="https://use.fontawesome.com/releases/v5.0.6/css/all.css" rel="stylesheet">
+</head>
+<body>
+  <div id="sidebar">
+    <h2>Menu</h2>
+    <ul>
+      <li><a href="#">Página 1</a></li>
+      <li><a href="#">Página 2</a></li>
+      <li><a href="#">Página 3</a></li>
+      <li><a href="#">Página 4</a></li>
+    </ul>
+  </div>
+  <div id="content">
+    <h1>Dashboard Minimalista</h1>
+    <div id="calendar"></div>
+  </div>
+
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/moment.js/2.24.0/moment.min.js"></script>
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
+  <script src="https://fullcalendar.io/releases/fullcalendar/3.10.0/fullcalendar.min.js" type="text/javascript"></script>
+  <script>
+    $(document).ready(function() {
+      $('#calendar').fullCalendar({
+        themeSystem: 'bootstrap4',
+        displayEventTime: false,
+        nowIndicator: true,
+        slotLabelInterval: "02:00",
+        slotDuration: "02:00",
+        timeFormat: 'H(:mm)',
+        slotLabelFormat:"HH:mm",
+        header: {
+          left: 'month,agendaWeek',
+          center: 'title',
+          right: 'today prev,next'
+        },
+        navLinks: true,
+        eventLimit: true,
+        allDaySlot: false,   
+        events: [
+          {
+            title: 'Evento 1',
+            start: '2023-06-01'
+          },
+          {
+            title: 'Evento 2',
+            start: '2023-06-05',
+            end: '2023-06-07'
+          },
+          {
+            title: 'Evento 3',
+            start: '2023-06-09T12:30:00'
+          }
+          // Adicione mais eventos aqui
+        ]
+      });
+
+        $('.fullcalendar').on('dp.change', function (e) {
+            var dia = $(this).data('DateTimePicker').date()._d.toLocaleDateString('pt-BR');
+            atualizaSessao(dia);
+
+        });
+    });
+  </script>
+</body>
+</html>

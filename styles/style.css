@@ -1,0 +1,87 @@
+body {
+    margin: 0;
+    padding: 0;
+    font-family: Arial, sans-serif;
+    background-color: #f4f4f4;
+  }
+  
+  #sidebar {
+    width: 180px;
+    height: 100%;
+    background-color: #202020;
+    color: #fff;
+    position: fixed;
+    left: 0;
+    top: 0;
+    padding: 20px;
+  }
+  
+  #sidebar h2 {
+    margin-top: 0;
+    margin-bottom: 20px;
+    font-size: 1.5rem;
+  }
+  
+  #sidebar ul {
+    list-style: none;
+    padding: 0;
+    margin: 0;
+  }
+  
+  #sidebar li {
+    margin-bottom: 10px;
+  }
+  
+  #sidebar li a {
+    text-decoration: none;
+    color: #fff;
+    font-size: 1.2rem;
+    transition: color 0.3s;
+  }
+  
+  #sidebar li a:hover {
+    color: #eaeaea;
+  }
+  
+  #content {
+    margin-left: 250px;
+    padding: 20px;
+  }
+  
+  #content h1 {
+    font-size: 2.5rem;
+    margin-top: 0;
+    margin-bottom: 30px;
+  }
+  
+  #calendar {
+    max-width: 900px;
+    margin: 0 auto;
+    background-color: #fff;
+    padding: 20px;
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+    border-radius: 4px;
+  }
+  
+  .fc-button {
+    background-color: #202020;
+    color: #fff;
+    border-color: #202020;
+  }
+  
+  .fc-button:hover {
+    background-color: #111;
+    color: #fff;
+    border-color: #111;
+  }
+  
+  .fc-prev-button:before,
+  .fc-next-button:before {
+    color: #fff;
+  }
+  
+  .fc-prev-button:hover:before,
+  .fc-next-button:hover:before {
+    color: #eaeaea;
+  }
+  
